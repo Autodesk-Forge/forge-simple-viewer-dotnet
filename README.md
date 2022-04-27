@@ -5,6 +5,21 @@
 Sample [Autodesk Forge](https://forge.autodesk.com) application attempting to provide a cleaner,
 easier-to-read implementation of the "View Models" application from https://learnforge.autodesk.io.
 
+## Setup & Run
+
+- Clone this repository
+- Install dependencies: `dotnet restore`
+- Setup environment variables in the appsettings.Development.json (create this file if its missing):
+  - `FORGE_CLIENT_ID` - your Forge application client ID
+  - `FORGE_CLIENT_SECRET` - your Forge application client secret
+  - `FORGE_BUCKET` - name of Forge bucket to store your designs in
+
+```
+Remember to replace the client ID, secret and forge bucket with your own. Note that the bucket name should be unique to your application.
+Using a bucket name that is already in use with different forge app credentials (client Id and Secret) to upload a file will result in an error.
+```
+
+
 ## Troubleshooting
 
 ### Invalid active developer path
